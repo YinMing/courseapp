@@ -34,9 +34,7 @@ server.post('/', (req, res, next) => {
     } = req.body;
 
     if (status.code === 200 && result.action === 'search') {
-        const {
-            code
-        } = result.parameters;
+        const code = result.parameters.code[0];
 
         var allCourses = getAllCourses();
         var courses = getCourseByCode(allCourses, code);
