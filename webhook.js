@@ -62,6 +62,15 @@ server.post('/', (req, res, next) => {
                     source: "courseapp-webhook"
                 });
             }
+            else
+            {
+                let responseText = `Sorry, No Courses found`;
+                res.json({
+                    speech: responseText,
+                    displayText: responseText,
+                    source: "courseapp-webhook"
+                });
+            }
 
         }
     }
