@@ -22,7 +22,7 @@ var getCourseByCode = (courses, code) => {
     return courses.filter(c => code.toLowerCase().indexOf(c.code.toLowerCase()) >= 0);
 }
 var getCourseByTitle = (courses, code) => {
-    return courses.filter(c => code.toLowerCase().indexOf(c.title.toLowerCase()) >= 0);
+    return courses.filter(c => c.title.toLowerCase().indexOf(code.toLowerCase()) >= 0);
 }
 
 
